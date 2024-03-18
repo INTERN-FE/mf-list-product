@@ -1,14 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.scss";
+import DetailProduct from "./components/detail-product";
+import ListProduct from "./components/list-product";
 
 const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div className="font-bold">Name: mf-ecommerce</div>
-    <div>Framework: react</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Tailwind</div>
-  </div>
+	<div className="">
+		<BrowserRouter>
+			<Routes>
+				<Route path="/">
+					<Route index element={<ListProduct />} />
+					<Route path="detail/:id" element={<DetailProduct />} />
+				</Route>
+			</Routes>
+		</BrowserRouter>
+	</div>
 );
 ReactDOM.render(<App />, document.getElementById("app"));
+
