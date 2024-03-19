@@ -24,7 +24,7 @@ const DetailProduct = () => {
 	}
 
 	return (
-		<div className="container mx-auto flex justify-center h-screen px-6 my-10">
+		<div className="container mx-auto flex justify-center h-screen px-6 my-10 gap-6">
 			<div className="w-8/12">
 				<Link to="/">
 					<div className="flex items-center gap-2">
@@ -43,13 +43,27 @@ const DetailProduct = () => {
 				</div>
 				<div className="flex flex-row mt-10 gap-4">
 					<div className="basis-1/2">
-						<h1 className="text-2xl font-bold">{product?.title}</h1>
-						<p className="text-sm font-semibol">{product?.category}</p>
-						<p className="text-lg font-semibold text-red-500 my-2">${product?.price}</p>
+						<h1 className="text-2xl font-semibold">{product?.title}</h1>
+						<p className="text-base pt-2 font-semibol">{product?.category}</p>
+						<p className="text-xl font-bold text-red-500 my-3">${product?.price}</p>
 						<p className="text-base mt-2">{product?.description}</p>
 					</div>
 					<div className="basis-1/2">
 						<button className="w-52 h-12 rounded-md bg-btnList text-white font-semibold text-base">Add to Cart</button>
+					</div>
+				</div>
+			</div>
+			<div className="w-4/12 border rounded-md mt-10">
+				<div className="flex justify-between items-center m-2 border rounded-sm gap-2 h-28">
+					<div className="flex">
+						<img src={product?.image} alt="" width={80} height={80} className="p-3" />
+						<div className="pt-3">
+							<p className="truncate text-sm font-normal w-1/2">{product?.title}</p>
+							<p className="text-sm font-semibold">${product?.price}</p>
+						</div>
+					</div>
+					<div>
+						<button>-</button>
 					</div>
 				</div>
 			</div>
