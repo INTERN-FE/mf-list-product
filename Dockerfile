@@ -4,7 +4,7 @@ FROM node:alpine as builder
 WORKDIR /app
 COPY package.json .
 COPY yarn.lock .
-RUN yarn
+RUN yarn --frozen-lockfile
 COPY . .
 RUN yarn build
 
