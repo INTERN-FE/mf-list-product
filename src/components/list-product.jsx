@@ -2,14 +2,14 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+const API_URL = "https://fakestoreapi.com/products";
+
 const ListProduct = () => {
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
-		
-
 		const fetchProducts = async () => {
-			const response = await fetch("https://fakestoreapi.com/products");
+			const response = await fetch(`${API_URL}`);
 			const json = await response.json();
 			setProducts(json);
 		};

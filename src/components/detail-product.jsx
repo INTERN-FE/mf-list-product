@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
+const API_URL = "https://fakestoreapi.com/products";
+
 const DetailProduct = () => {
 	const { id } = useParams();
 	const [product, setProduct] = useState(null);
@@ -8,7 +10,7 @@ const DetailProduct = () => {
 	useEffect(() => {
 		const fetchProduct = async () => {
 			try {
-				const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+				const response = await fetch(`${API_URL}/${id}`);
 				const data = await response.json();
 				setProduct(data);
 			} catch (error) {
