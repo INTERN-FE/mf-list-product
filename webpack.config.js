@@ -4,7 +4,7 @@ const Dotenv = require("dotenv-webpack");
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    publicPath: "http://localhost:4251/",
+    publicPath: process.env.BASE_HOST_URL ?? "http://localhost:4251/",
   },
 
   resolve: {
