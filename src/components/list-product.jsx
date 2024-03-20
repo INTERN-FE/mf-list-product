@@ -18,7 +18,7 @@ const ListProduct = () => {
 	}, []);
 
 	return (
-		<div className="container mx-auto my-10">
+		<div className="container mx-auto my-10 font-poppins">
 			<p className="text-2xl font-semibold mb-4">List Products</p>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 				{products.map((product) => (

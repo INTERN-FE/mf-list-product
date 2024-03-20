@@ -61,7 +61,7 @@ const DetailProduct = ({ cartItem, dispatch }) => {
 	};
 
 	return (
-		<div className="container mx-auto flex flex-col sm:flex-row justify-center h-screen px-6 mt-10 mb-30 gap-10">
+		<div className="container mx-auto flex flex-col sm:flex-row justify-center h-screen px-6 mt-10 mb-30 gap-10 font-poppins">
 			<div className="flex-1">
 				<Link to="/">
 					<div className="flex items-center gap-2">
@@ -80,10 +80,10 @@ const DetailProduct = ({ cartItem, dispatch }) => {
 				</div>
 				<div className="flex flex-col sm:flex-row mt-10 gap-4">
 					<div className="basis-1/2">
-						<h1 className="text-2xl font-bold">{product?.title}</h1>
-						<p className="text-sm font-semibol">{product?.category}</p>
-						<p className="text-lg font-semibold text-red-500 my-2">${product?.price}</p>
-						<p className="text-base mt-2">{product?.description}</p>
+						<h1 className="text-2xl font-semibold">{product?.title}</h1>
+						<p className="text-sm font-normal pt-1">{product?.category}</p>
+						<p className="text-xl font-bold text-red-500 my-2">${product?.price}</p>
+						<p className="text-sm mt-2">{product?.description}</p>
 					</div>
 					<div className="basis-1/2">
 						<button
@@ -102,7 +102,7 @@ const DetailProduct = ({ cartItem, dispatch }) => {
 			</div>
 
 			<div className="flex flex-col flex-none md:w-80 py-10 gap-2">
-				<h3 className="font-bold text-lg ">Cart Item</h3>
+				<h3 className="font-bold text-lg">Cart Item</h3>
 				{cartItem
 					? cartItem.map((item) => (
 							<CartItem
