@@ -4,6 +4,8 @@ const Dotenv = require("dotenv-webpack");
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
+    clean: true,
+    filename: "[name].bundle.js",
     publicPath: process.env.BASE_HOST_URL ?? "http://localhost:4251/",
   },
 
