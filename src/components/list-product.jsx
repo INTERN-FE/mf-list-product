@@ -1,3 +1,17 @@
+/*
+ * Copyright Intern MSIB6 @ PT Len Industri (Persero)
+ *
+ * THIS SOFTWARE SOURCE CODE AND ANY EXECUTABLE DERIVED THEREOF ARE PROPRIETARY
+ * TO PT LEN INDUSTRI (PERSERO), AS APPLICABLE, AND SHALL NOT BE USED IN ANY WAY
+ * OTHER THAN BEFOREHAND AGREED ON BY PT LEN INDUSTRI (PERSERO), NOR BE REPRODUCED
+ * OR DISCLOSED TO THIRD PARTIES WITHOUT PRIOR WRITTEN AUTHORIZATION BY
+ * PT LEN INDUSTRI (PERSERO), AS APPLICABLE.
+ *
+ * Created Date: Wednesday, March 20th 2024, 8:01:55 am
+ * Author: Annisa Nailiya Zahrah, Abdul Raihan & Rizki Rifani
+ *
+ */
+
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -19,7 +33,7 @@ const ListProduct = () => {
 
 	return (
 		<div className="container mx-auto my-10 font-poppins">
-			<p className="text-2xl font-semibold mb-4">List Products</p>
+			<p className="text-2xl font-semibold mb-6">List Products</p>
 			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 				{products.map((product) => (
 					<div
